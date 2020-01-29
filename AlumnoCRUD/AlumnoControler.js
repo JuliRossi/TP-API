@@ -1,0 +1,1 @@
+const alumno = require('../Modelos/Alumno')
