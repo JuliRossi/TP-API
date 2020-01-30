@@ -1,11 +1,25 @@
 {
   "name": "tp-api",
   "version": "1.0.0",
-  "description": "",
   "main": "tp-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juliana Rossi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "mongoose": "^5.8.10"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliRossi/TP-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JuliRossi/TP-API/issues"
+  },
+  "homepage": "https://github.com/JuliRossi/TP-API#readme",
+  "description": ""
 }

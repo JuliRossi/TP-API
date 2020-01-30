@@ -10,5 +10,3 @@ const nuevoAlumno = new alumno ({
     nota : body.nota 
 });
 
-nuevoAlumno.save() 
-    .then(created=>)

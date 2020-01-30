@@ -9,6 +9,4 @@ const alumno = new mongoose.Schema({
 
 });
 
-module.exports = alumno
-
-alumno;
+module.exports = alumno;
