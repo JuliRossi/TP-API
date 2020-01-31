@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "aa701734-8e97-4540-8a08-0aa84adfa117",
+		"name": "TP-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ver todos los cursos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \t\"idCurso\" : 6,\r\n    \"añoDeDictado\": 2019,\r\n    \"duracion\": 120,\r\n    \"tema\": \"Como volar una casa\",\r\n    \"alumnos\":  [{\r\n    \t\"nombre\" : \"Primer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Paja\",\r\n    \t\"nota\" : 4\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Segundo\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Madera\",\r\n    \t\"nota\" : 6\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Tercer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de ladrillo\",\r\n    \t\"nota\" : 10\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "180",
+							"disabled": true
+						},
+						{
+							"key": "tema",
+							"value": "\"El arte de amar\"",
+							"disabled": true
+						},
+						{
+							"key": "alumnos",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creacion de un Curso con id 6 y 3 alumnos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \t\"idCurso\" : 6,\r\n    \"añoDeDictado\": 2019,\r\n    \"duracion\": 120,\r\n    \"tema\": \"Como construir una casa\",\r\n    \"alumnos\":  [{\r\n    \t\"nombre\" : \"Primer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Paja\",\r\n    \t\"nota\" : 4\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Segundo\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909981,\r\n    \t\"direccion\": \"Casa de Madera\",\r\n    \t\"nota\" : 6\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Tercer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909983,\r\n    \t\"direccion\": \"Casa de ladrillo\",\r\n    \t\"nota\" : 10\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "180",
+							"disabled": true
+						},
+						{
+							"key": "tema",
+							"value": "\"El arte de amar\"",
+							"disabled": true
+						},
+						{
+							"key": "alumnos",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina al curso",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \t\"idCurso\" : 6,\r\n    \"añoDeDictado\": 2019,\r\n    \"duracion\": 120,\r\n    \"tema\": \"Como construir una casa\",\r\n    \"alumnos\":  [{\r\n    \t\"nombre\" : \"Primer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Paja\",\r\n    \t\"nota\" : 4\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Segundo\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909981,\r\n    \t\"direccion\": \"Casa de Madera\",\r\n    \t\"nota\" : 6\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Tercer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909983,\r\n    \t\"direccion\": \"Casa de ladrillo\",\r\n    \t\"nota\" : 10\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/6/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"6",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "180",
+							"disabled": true
+						},
+						{
+							"key": "tema",
+							"value": "\"El arte de amar\"",
+							"disabled": true
+						},
+						{
+							"key": "alumnos",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrado de los cursos por duracion y año",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \t\"idCurso\" : 6,\r\n    \"añoDeDictado\": 2019,\r\n    \"duracion\": 120,\r\n    \"tema\": \"Como volar una casa\",\r\n    \"alumnos\":  [{\r\n    \t\"nombre\" : \"Primer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Paja\",\r\n    \t\"nota\" : 4\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Segundo\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de Madera\",\r\n    \t\"nota\" : 6\r\n    },\r\n    {\r\n    \t\"nombre\" : \"Tercer\",\r\n    \t\"apellido\" : \"Chanchito\",\r\n    \t\"dni\": 19909980,\r\n    \t\"direccion\": \"Casa de ladrillo\",\r\n    \t\"nota\" : 10\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/?añoDeDictado=2019&duracion=9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "duracion",
+							"value": "180",
+							"disabled": true
+						},
+						{
+							"key": "tema",
+							"value": "\"El arte de amar\"",
+							"disabled": true
+						},
+						{
+							"key": "alumnos",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "añoDeDictado",
+							"value": "2019"
+						},
+						{
+							"key": "duracion",
+							"value": "9"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener los alumnos de un curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/6/alumnos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"6",
+						"alumnos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener  alumno destacado del curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/6/alumnoDestacado",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"6",
+						"alumnoDestacado"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
