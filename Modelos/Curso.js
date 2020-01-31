@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const alumno = require('./Alumno');
 
 const curso = new mongoose.Schema({
-    idCurso : {type : Number},
+    idCurso : {type : Number}, 
     añoDeDictado: { type: Number },
     duracion: { type: Number }, // Tomo que se cuenta la duracion del curso en horas
     tema: { type: String },

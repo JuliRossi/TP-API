@@ -35,14 +35,7 @@ const postCurso = (req, res, next) => {
 
     const body = req.body;
 
-    const nuevoCurso = new curso({
-        idCurso : body.id,
-        añoDeDictado: body.añoDeDictado,
-        duracion: body.duracion,
-        tema: body.tema,
-        alumnos: body.alumnos
-
-    });
+    const nuevoCurso = new curso(body);
   
     nuevoCurso.save()
         .then(
@@ -82,4 +75,4 @@ const deleteCurso = (req, res, next) => {
         })
 };
 
-module.exports = { getCurso,postCurso, deleteCurso};
+module.exports = { getCurso, postCurso, deleteCurso};
