@@ -59,7 +59,7 @@ const postCurso = (req, res, next) => {
 const deleteCurso = (req, res, next) => {
     const id = parseInt(req.params.idCurso);
 
-    curso.find({"idCurso": id})
+    curso.deleteOne({ idCurso: id})
         .then(() => {
             res.status(200).json({
                 code: 0,
