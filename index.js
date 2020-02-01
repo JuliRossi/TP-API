@@ -20,5 +20,4 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, us
         app.listen(port, () => { console.log(`Corriendo en port ${port}`) })
     })
     .catch(err => {
-        console.log(err);
     });

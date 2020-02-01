@@ -2,7 +2,7 @@ const curso = require('../Modelos/Curso');
 
 const { validationResult } = require('express-validator'); //Sirve para usar check
 
-const getCurso= (req,res,next) =>{
+const getCursos= (req,res,next) =>{
     const query = req.query || {};
 
     curso.find(query).limit(10)
@@ -75,4 +75,4 @@ const deleteCurso = (req, res, next) => {
         })
 };
 
-module.exports = { getCurso, postCurso, deleteCurso};
+module.exports = { getCursos, postCurso, deleteCurso};

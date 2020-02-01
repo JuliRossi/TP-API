@@ -1,17 +1,7 @@
 const alumno = require('../Modelos/Alumno')
 const curso = require('../Modelos/Curso')
 
-//onst body = req.body ;
-/*
-const nuevoAlumno = new alumno ({
-    nombre : body.nombre,
-    apellido : body.apellido,
-    dni : body.dni,
-    direccion : body.direccion,
-    nota : body.nota 
-});
-*/
-const getAlumno= (req, res, next) => {
+const getAlumnos= (req, res, next) => {
     const idCurso = req.params.idCurso
     curso.find({ "idCurso": idCurso})
         .then(alumno => {
@@ -54,4 +44,4 @@ const  getAlumnoDestacado = (req, res, next) => {
 };
 
 
-module.exports = { getAlumno, getAlumnoDestacado };
+module.exports = { getAlumnos, getAlumnoDestacado };
