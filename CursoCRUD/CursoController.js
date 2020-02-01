@@ -48,7 +48,7 @@ const postCurso = (req, res, next) => {
         ).catch(
             err => {
                 res.status(500).json({
-                    code: 0,
+                    code: 20,
                     menssage: "Ocurrió un error con un modulo interno"
                 });
             }
