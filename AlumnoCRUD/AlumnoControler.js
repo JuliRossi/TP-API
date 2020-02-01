@@ -11,7 +11,7 @@ const nuevoAlumno = new alumno ({
     nota : body.nota 
 });
 */
-const getAlumno= (req, res, next) => {
+const getAlumnos= (req, res, next) => {
     const idCurso = req.params.idCurso
     curso.find({ "idCurso": idCurso})
         .then(alumno => {
@@ -54,4 +54,4 @@ const  getAlumnoDestacado = (req, res, next) => {
 };
 
 
-module.exports = { getAlumno, getAlumnoDestacado };
+module.exports = { getAlumnos, getAlumnoDestacado };

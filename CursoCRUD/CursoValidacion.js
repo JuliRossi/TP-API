@@ -6,7 +6,8 @@ const cursoValidador= [
     body('idCurso','El campo id debe ser numérico').isNumeric().bail(),
     body('añoDeDictado','El campo añoDeDictado debe ser numérico').isNumeric().bail(),
     body('tema','El tema del curso no puede estar en blanco').exists().bail(),
-    body('duracion','El campo añoDeDictado debe ser numérico').isNumeric().bail()
+    body('duracion','El campo añoDeDictado debe ser numérico').isNumeric().bail(),
+    //...alumnoValidador
 ];
 
 

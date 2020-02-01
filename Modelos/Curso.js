@@ -8,8 +8,7 @@ const curso = new mongoose.Schema({
     duracion: { type: Number }, // Tomo que se cuenta la duracion del curso en horas
     tema: { type: String },
     alumnos: {
-        type: [alumno],
-        default: undefined
+        type: [alumno]
     }
 },{collection: 'curso'});
 module.exports = mongoose.model('curso',curso)

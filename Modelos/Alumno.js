@@ -6,7 +6,6 @@ const alumno = new mongoose.Schema({
     dni: { type: Number },
     direccion: { type: String },
     nota: { type: Number }
-
 });
 
 module.exports = alumno;
